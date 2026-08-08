@@ -1,14 +1,18 @@
 import java.util.*;
 public class calculator {
        public static void main(String[] args) {
-        int a = 10;
-        int b = 5;
         Scanner sc = new Scanner(System.in);
+        System.out.println("enter first no");
+        int a = sc.nextInt();
+                System.out.println("enter second no");
+
+        int b = sc.nextInt();
         int operation = sc.nextInt();
+        System.out.println("enter operation");
         
         switch (operation) {
             case 1:System.out.println(a + b);
-                 
+                
                 break;
             case 2 : System.out.println(a - b);
                 break;
@@ -36,4 +40,3 @@ public class calculator {
         }
  
     }
-}
