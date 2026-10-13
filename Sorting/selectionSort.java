@@ -11,22 +11,26 @@ public class selectionSort {
             System.out.println("enter the size of the array");
             int size = sc.nextInt();
             int arr [] = new int [size];
-            for ( int i = 0 ; i < size; i++){
+            for ( int i = 0 ; i < size ; i++){
                 arr[i] = sc.nextInt();
             }
-            for ( int i = 0 ; i < size; i++){
+            for ( int i = 0 ; i < size - 1; i++){
                 int smallest = i ;
-                for ( int j = i + 1  ; j < size; i++){
-                    if ( arr[i] > arr[j]  ){
-                        arr[smallest] = arr[j];
-                        
-
+                for ( int j = i + 1  ; j < size; j++){
+                    if ( arr[smallest] > arr[j]  ){
+                        smallest = j ;
                     }
                 }
+                        int temp = arr[smallest];
+                        arr[smallest] = arr[i];
+                        arr[i] = temp;
+                    }
+                    printArray(arr);
+                }
             }
-            printArray(arr);
-        }
-
-    }
+        
+    
+    
+    
     
 
